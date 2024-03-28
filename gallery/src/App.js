@@ -1,26 +1,17 @@
 import './App.css';
 
+import { name } from "./data";
+import { User } from "./components/User"
+import pageTitle, { SUB_TITLE as myOwnValue } from "./constants";
+import UserContainer from './components/UserContainer';
+
 function App() {
   return <div>
-    <h1>Users:</h1>
-    <section className="container">
-      <User name="Pasha" job="UI Dev" location="Hyderabad" />
-      <User name="Jabeen" job="Engineer" location="Ongole" />
-      <User name="Uma" job="Frontend Develop" location="Vijayawada" />
-      <User name="Rahman" job="UI Dev" />
-      <User name="Teja" job="Developer" />
-      <User name="Shabber" />
-    </section>
+    <h1>{pageTitle}</h1>
+    <h2>{myOwnValue}</h2>
+    <UserContainer />
   </div>
 }
 
-
-function User(props) {
-  return <div className="user other-class">
-    <h3>{props.name}</h3>
-    <p>Job: {props.job}</p>
-    <p>Location: {props.location}</p>
-  </div>
-}
 
 export default App;
